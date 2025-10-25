@@ -15,7 +15,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(help_text)
 
 async def hello_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Hello! Как я могу помочь?")
+    await update.message.reply_text("Прив! Как я могу помочь?\nнапиши /help чтобы увидеть список команд")
 
 async def random_number(update: Update, context: ContextTypes.DEFAULT_TYPE):
     number = random.randint(1, 100)
@@ -72,4 +72,5 @@ app.add_handler(CommandHandler("guess", guess_command))
 app.add_handler(CommandHandler("joke", joke_command))
 
 app.run_polling()
+
 
